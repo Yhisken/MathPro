@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'bootstrap/bootstrap.4.6.min.css') }}">
+    <script src = '{{ url_for('static',filename = 'jquery/jquery.3.6.min.js') }}'></script>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="搜索...">
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-body">
+                    <h5 class="card-title text-center"><a href="#" class="text-white">训练场</a></h5>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-body">
+                    <h5 class="card-title text-center"><a href="#" class="text-white">排行榜</a></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-body">
+                    <h5 class="card-title text-center"><a href="#" class="text-white">错题本</a></h5>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-body">
+                    <h5 class="card-title text-center"><a href="#" class="text-white">思维导图</a></h5>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-body">
+                    <h5 class="card-title text-center"><a href="#" class="text-white">个人</a></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

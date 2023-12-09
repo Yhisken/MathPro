@@ -1,0 +1,102 @@
+{#<!DOCTYPE html>#}
+{#<html>#}
+{#	<head>#}
+{#		<meta charset="UTF-8">#}
+{#		<title></title>#}
+{#		 <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename = 'css/register.css') }}" />#}
+{#        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename = 'bootstrap/bootstrap.4.6.min.css') }}" />#}
+{#        <script src = "{{ url_for('static',filename = 'js/register.js') }}"></script>#}
+{#        <script src = '{{ url_for('static',filename = 'jquery/jquery.3.6.min.js') }}'></script>#}
+{#	</head>#}
+{#	<body>#}
+{#			<div class="login-box">#}
+{#			<h2>Register</h2>#}
+{#			<form action="#" method="POST">#}
+{#				<div class="login-field">#}
+{#					<input type="email" name="" required=""/>#}
+{#                    <label>Email</label>#}
+{#				</div>#}
+{#				<div class="login-field">#}
+{#					<input type="text" name="" required=""/>#}
+{#                    <label>Captcha</label>#}
+{#                </div>#}
+{#                <button type="button" style="line-height: 50%;" id="captcha-btn">Get Captcha</button>#}
+{##}
+{#				<div class="login-field">#}
+{#					<input type="text" name="" required="" />#}
+{#					<label>Username</label>#}
+{#				</div>#}
+{#				<div class="login-field">#}
+{#					<input type="password" name="" required="" />#}
+{#					<label >Password</label>#}
+{#				</div>#}
+{#				<div class="login-field">#}
+{#					<input type="password" name="" required="" />#}
+{#					<label >Confirm Password</label>#}
+{#				</div>#}
+{#				<button type="submit">Submit</button>#}
+{#			</form>#}
+{#		</div>#}
+{#	</body>#}
+{#</html>#}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		 <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename = 'css/register.css') }}" />
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename = 'bootstrap/bootstrap.4.6.min.css') }}" />
+        <script src = '{{ url_for('static',filename = 'jquery/jquery.3.6.min.js') }}'></script>
+        <script src = "{{ url_for('static',filename = 'js/register.js') }}"></script>
+
+	</head>
+	<body>
+			<div class="login-box">
+			<h2>Register</h2>
+			<form action="#" method="POST">
+				<div class="login-field">
+					<input type="email" id='InputEmail' name="email" required="" />
+                    <label>Email</label>
+				</div>
+				<div class="login-field">
+					<input type="text" name="captcha" required=""/>
+                    <label>Captcha</label>
+                </div>
+                <button type="button" style="line-height: 50%;" id="captcha-btn">获取验证码</button>
+
+				<div class="login-field">
+					<input type="text" name="username" required="" />
+					<label>Username</label>
+				</div>
+				<div class="login-field">
+					<input type="password" name="password" required="" />
+					<label >Password</label>
+				</div>
+				<div class="login-field">
+					<input type="password" name="password_confirm" required="" />
+					<label >Confirm Password</label>
+				</div>
+				<button type="submit">Submit</button>
+			</form>
+		</div>
+
+        <script>
+            $(document).ready(function(){
+                $('input').on('focus', function(){
+                    $(this).next('label').css('top', '-20px');
+                    $(this).next('label').css('font-size', '14px');
+                    $(this).next('label').css('color', '#3498db');
+                });
+
+                $('input').on('blur', function(){
+                    if($(this).val() === ''){
+                        $(this).next('label').css('top', '0');
+                        $(this).next('label').css('font-size', '16px');
+                        $(this).next('label').css('color', '#aaa');
+                    }
+                });
+            });
+        </script>
+
+    </body>
+</html>
